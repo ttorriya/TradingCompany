@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="412.0" prefWidth="556.0" style="-fx-background-color: #3c4c5b;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.authentication.sign_up.SignUpController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #303132;">
+         <children>
+            <AnchorPane prefHeight="70.0" prefWidth="65.0" style="-fx-background-color: #ab9eee;">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="6.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/exitButtin.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text fx:id="accessText" fill="#f5f5f6" layoutX="179.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация" wrappingWidth="309.455078125">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="firstname" layoutX="28.0" layoutY="86.0" prefHeight="35.0" prefWidth="194.0" promptText="Имя" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastname" layoutX="28.0" layoutY="139.0" prefHeight="35.0" prefWidth="194.0" promptText="Фамилия" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="patronymic" layoutX="28.0" layoutY="194.0" prefHeight="35.0" prefWidth="194.0" promptText="Отчество" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="email" layoutX="28.0" layoutY="251.0" prefHeight="35.0" prefWidth="194.0" promptText="email" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phone_number" layoutX="28.0" layoutY="307.0" prefHeight="35.0" prefWidth="194.0" promptText="Телефон" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="login" layoutX="306.0" layoutY="104.0" prefHeight="35.0" prefWidth="194.0" promptText="Логин" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" layoutX="306.0" layoutY="166.0" prefHeight="35.0" prefWidth="194.0" promptText="Пароль" style="-fx-background-color: #333d49; -fx-text-inner-color: #f5f5f6;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="accessBox" layoutX="306.0" layoutY="235.0" prefHeight="35.0" prefWidth="194.0" promptText="Доступ" style="-fx-background-color: #333d49;" />
+      <Button fx:id="sigh_inButton" layoutX="362.0" layoutY="334.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #333d49;" text="Зарегистрироваться" textAlignment="JUSTIFY" textFill="#f5f5f6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="-3.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="70.0" prefWidth="65.0" />
+   </children>
+</AnchorPane>

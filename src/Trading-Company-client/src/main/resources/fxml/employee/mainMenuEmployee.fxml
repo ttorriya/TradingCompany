@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1066.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.employee.EmployeeMainMenuController">
+   <children>
+      <AnchorPane layoutX="200.0" prefHeight="50.0" prefWidth="867.0" style="-fx-background-color: #3c4c5b;">
+         <children>
+            <AnchorPane layoutX="574.0" prefHeight="50.0" prefWidth="293.0" style="-fx-background-color: #333d49;">
+               <children>
+                  <Text fx:id="surname" fill="WHITE" layoutX="95.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+                  <Text fx:id="name" fill="WHITE" layoutX="21.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="69.3525390625" />
+                  <MenuButton fx:id="settingsMenu" layoutX="236.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: #333d49;">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #303132;">
+         <children>
+            <Button fx:id="transferButton" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Распределение товаров" textFill="#dddddd" />
+            <Button fx:id="addDeliveryButton" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Добавление поставки" textFill="#dddddd" />
+            <AnchorPane prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #ab9eee;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/exitButtin.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#fafafa" layoutX="77.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BACK TO HOME" wrappingWidth="101.28955078125">
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="exitButton" mnemonicParsing="false" opacity="0.0" prefHeight="50.0" prefWidth="220.0" text="exitButton" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="deleteButton" layoutX="-1.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Удаление товаров" textFill="#dddddd" />
+            <Button fx:id="metodButton" layoutX="1.0" layoutY="358.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Оценка товаров" textFill="#dddddd" />
+            <Button fx:id="metodButton1" layoutX="1.0" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Управление товарами" textFill="#dddddd" />
+            <Button fx:id="fullnessButton" layoutY="226.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Заполненность складов" textFill="#dddddd" />
+            <Button fx:id="priceRealiseButton" layoutX="1.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Цены реализации" textFill="#dddddd" />
+         </children>
+      </AnchorPane>
+      <StackedBarChart fx:id="chart" animated="false" layoutX="224.0" layoutY="61.0" prefHeight="439.0" prefWidth="662.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <ScrollPane fx:id="scrollpane" layoutX="224.0" layoutY="69.0" prefHeight="439.0" prefWidth="838.0">
+         <content>
+            <TableView fx:id="goodsTable" prefHeight="436.0" prefWidth="834.0">
+               <columns>
+                  <TableColumn fx:id="barcode" prefWidth="25.0" text="ID" />
+                  <TableColumn fx:id="product_name" prefWidth="156.0" text="Наименование" />
+                  <TableColumn fx:id="price" prefWidth="135.0" text="Закупочная цена" />
+                  <TableColumn fx:id="occupied_space" minWidth="0.0" prefWidth="103.0" text="Занимаемое место м^3" />
+                  <TableColumn fx:id="quantity" prefWidth="58.0" text="Кол-во" />
+                  <TableColumn fx:id="priceRealise" prefWidth="136.0" text="Цена реализации" />
+                  <TableColumn fx:id="ratingNum" prefWidth="115.0" text="Оценка кол-ва" />
+                  <TableColumn fx:id="ratingPrice" prefWidth="105.0" text="Оценка цены" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="todoButton" layoutX="815.0" layoutY="532.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #333d49;" text="TextTodo" textFill="#dddddd" />
+      <TextField fx:id="inputRatingNum" layoutX="437.0" layoutY="523.0" />
+      <Text fx:id="ratingTextNum" layoutX="243.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оценка количества товара:" />
+      <Text fx:id="ratingTextPrice" layoutX="243.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оценка цены товара:" />
+      <TextField fx:id="inputRatingPrice" layoutX="392.0" layoutY="550.0" />
+   </children>
+</AnchorPane>

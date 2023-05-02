@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminMetodController">
+   <children>
+      <AnchorPane layoutX="200.0" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #3c4c5b;">
+         <children>
+            <AnchorPane layoutX="407.0" prefHeight="50.0" prefWidth="293.0" style="-fx-background-color: #333d49;">
+               <children>
+                  <Text fx:id="surname" fill="WHITE" layoutX="95.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+                  <Text fx:id="Name" fill="WHITE" layoutX="38.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <MenuButton fx:id="settingsMenu" layoutX="236.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: #333d49;">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #303132;">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #ab9eee;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/exitButtin.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#fafafa" layoutX="77.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BACK TO HOME" wrappingWidth="101.28955078125">
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="exitButton" mnemonicParsing="false" opacity="0.0" prefHeight="50.0" prefWidth="220.0" text="exitButton" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="metodButton" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #333d49;" text="Управление товарами" textFill="#dddddd" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="446.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Матрица оценок экспертов">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="429.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Матрица нормативных оценок">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="todoButton" layoutX="672.0" layoutY="542.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="183.0" style="-fx-background-color: #333d49;" text="Управление товаром" textFill="#dddddd" />
+      <TableView fx:id="firstTable" layoutX="309.0" layoutY="91.0" prefHeight="135.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="fisrtTableId" prefWidth="101.0" text="ID эксперта" />
+          <TableColumn fx:id="firstTableNum" prefWidth="205.0" text="Пополнить склад товаром" />
+            <TableColumn fx:id="firstTablePrice" prefWidth="213.0" text="Изменить цену товара" />
+        </columns>
+      </TableView>
+      <TableView fx:id="secondTable" layoutX="309.0" layoutY="265.0" prefHeight="135.0" prefWidth="520.0">
+         <columns>
+            <TableColumn fx:id="secondTableId" prefWidth="101.0" text="ID эксперта" />
+            <TableColumn fx:id="secondTableNum" prefWidth="205.0" text="Пополнить склад товаром" />
+            <TableColumn fx:id="secondTablePrice" prefWidth="213.0" text="Изменить цену товара" />
+         </columns>
+      </TableView>
+      <Text layoutX="468.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Искомые веса целей">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="337.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пополнить склад выбранным товаром" wrappingWidth="266.0" />
+      <Text layoutX="626.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменить цену товара" wrappingWidth="182.7294921875" />
+      <Line endX="419.7294921875" endY="0.93310546875" layoutX="391.0" layoutY="437.0" startX="-65.0" startY="0.93310546875" />
+      <Line endX="419.7294921875" endY="0.93310546875" layoutX="391.0" layoutY="485.0" startX="-65.0" startY="0.93310546875" />
+      <Line endX="-77.5" endY="-8.56689453125" layoutX="403.0" layoutY="495.0" startX="-77.5" startY="-56.56689453125" />
+      <Line endX="419.7294921875" endY="0.93310546875" layoutX="391.0" layoutY="462.0" startX="-65.0" startY="0.93310546875" />
+      <Line endX="-77.5" endY="-8.56689453125" layoutX="888.0" layoutY="495.0" startX="-77.5" startY="-56.56689453125" />
+      <Line endX="-77.5" endY="-8.56689453125" layoutX="691.0" layoutY="494.0" startX="-77.5" startY="-56.56689453125" />
+      <Text fx:id="finalNum" layoutX="337.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="finalNum" />
+      <Text fx:id="finalPrice" layoutX="624.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="finalPrice" />
+   </children>
+</AnchorPane>
